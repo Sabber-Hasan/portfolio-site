@@ -1,0 +1,228 @@
+Users:-
+	id (Primary Key)
+	name
+	email
+	mobile
+	image
+	password
+	location (city or address)
+	Address
+	roles
+	created_at
+	updated_at
+	
+Profile:- mc
+	id (Primary Key)
+	user_id(Foreign key)
+	title
+	dob
+	nid
+	bio
+	bc_no #Birth certificate
+	file
+	created_at
+	updated_at
+
+Gallery:- mcrsf
+	id (Primary Key)
+	user_id(Foreign key)
+	file #mp4,gif,png,jpg,jpeg,web
+	status [1,0] default=1
+	created_at
+	updated_at
+
+CV:- mcrsf
+	id (Primary Key)
+	user_id(Foreign key)
+	file #pdf,doc,docx,zip,rar,
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Files:- mcrsf
+	id (Primary Key)
+	user_id(Foreign key)
+	title
+	file #img,png,zip,rar,
+	status [1,0] default=1
+	created_at
+	updated_at
+	
+Links:- mcrsf
+	id (Primary Key)
+	user_id(Foreign key)
+	title
+	link
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Projects:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	title
+	description
+	technologies
+	thumb
+	link
+	git
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Skills:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	skill
+	level ['beginner','intermediate','advanced','pro','pro max']
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Experience:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	title
+	company
+	address
+	phone
+	email
+	position
+	department
+	description
+	from
+	to
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Education:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	level ['primary','secondary','higher secondary','diploma','bachelor','master','phd','other']
+	institute
+	board
+	duration
+	session
+	subject
+	group
+	division
+	grade
+	grade_out_of
+	passing_year
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Certifications:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	title
+	issuing_organization
+	issue_date
+	expiration_date
+	description
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Training:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	title
+	provider
+	location
+	duration
+	start_date
+	end_date
+	description
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Languages:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	language
+	proficiency [beginner, intermediate, advanced, fluent, native]
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Clients:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	name
+	company
+	email
+	phone
+	address
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Settings:- mc
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	icon
+	title
+	author
+	description
+	keywords
+	copyright
+	theme
+	created_at
+	updated_at
+
+Contact:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	email
+	title
+	msg
+	status [read,unread,replied] default=unread
+	created_at
+	updated_at
+
+Achievements:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	title
+	description
+	date
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Reference:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	name
+	organization
+	designation
+	phone
+	email
+	relation
+	address
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Address:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	type ['present','permanent','office','home','other']
+	description
+	status [1,0] default=1
+	created_at
+	updated_at
+	
+Carousel:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	title
+	heading
+	file #png,jpg,jpeg
+	jump_button
+	created_at
+	updated_at
