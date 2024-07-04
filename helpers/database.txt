@@ -10,6 +10,19 @@ Users:-
 	roles
 	created_at
 	updated_at
+
+Country:- mcrsf
+	id (Primary Key)
+	name
+	created_at
+	updated_at
+
+city:- mcrsf
+	id (Primary Key)
+	country_id(Foreign key)
+	name
+	created_at
+	updated_at
 	
 Profile:- mc
 	id (Primary Key)
