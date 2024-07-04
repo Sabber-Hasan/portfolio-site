@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('designation');
             $table->string('details');
             $table->string('image');
+            $table->string('link');
             $table->timestamps();
         });
     }
