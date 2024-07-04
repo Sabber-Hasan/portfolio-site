@@ -239,3 +239,13 @@ Carousel:- mcrsf
 	jump_button
 	created_at
 	updated_at
+
+Team:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	name
+	designation
+	details
+	image
+	created_at
+	updated_at

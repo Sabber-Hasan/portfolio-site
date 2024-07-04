@@ -146,4 +146,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Carousel::class);
     }
+
+    public function teams():HasMany
+    {
+        return $this->hasMany(Team::class);
+    }
 }
