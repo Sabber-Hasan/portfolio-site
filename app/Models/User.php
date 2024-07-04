@@ -151,4 +151,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Team::class);
     }
+
+    public function prices():HasMany
+    {
+        return $this->hasMany(Price::class);
+    }
+
+    public function categories():HasMany
+    {
+        return $this->hasMany(Category::class);
+    }
+
+    public function blogs():HasMany
+    {
+        return $this->hasMany(Blog::class);
+    }
 }

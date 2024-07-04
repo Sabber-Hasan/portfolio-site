@@ -249,3 +249,45 @@ Team:- mcrsf
 	image
 	created_at
 	updated_at
+
+Price:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	user_id
+	title
+	technology
+	features
+	pages
+	description
+	image
+	code
+	link
+	days
+	service
+	type ['basic', 'standard', 'premium'] default = basic
+	price
+	status [1,0] default=1
+	created_at
+	updated_at
+
+Category:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	user_id
+	name
+	icon
+	created_at
+	updated_at
+
+Blog:- mcrsf
+	id (Primary Key)
+	user_id (Foreign Key to Users)
+	user_id
+	category_id
+	title
+	image
+	description
+	status [1,0] default=1
+	softDeletes
+	created_at
+	updated_at
