@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('mobile')->nullable();
             $table->string('image')->nullable();
             $table->text('address')->nullable();
-            $table->set('role', ['admin', 'user'])->default('user')->nullable();
+            $table->set('role', ['admin', 'applicant'])->default('applicant')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
