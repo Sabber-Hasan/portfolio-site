@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('keywords');
             $table->string('copyright');
             $table->string('theme');
+            $table->integer('paginate');
             $table->timestamps();
         });
     }

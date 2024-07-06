@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Applicant;
 
+use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return view('starlight.project.index');
     }
 
     /**
@@ -20,7 +21,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('starlight.project.create');
     }
 
     /**

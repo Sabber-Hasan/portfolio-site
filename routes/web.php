@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Applicant\ProjectController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -49,6 +50,7 @@ Route::middleware('admin')->group(function () {
 //User or Aplicant middleware for user
 Route::middleware('applicant')->group(function () {
     Route::get('applicant', [UserController::class, 'index'])->name('applicant');
+    Route::resource('project', ProjectController::class);
 });
 
 require __DIR__ . '/auth.php';

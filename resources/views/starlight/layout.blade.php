@@ -36,7 +36,7 @@
     <link href="{{asset('starlight')}}/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="{{asset('starlight')}}/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="{{asset('starlight')}}/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
-
+    @yield('head')
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="{{asset('starlight')}}/css/starlight.css">
 </head>
@@ -59,7 +59,8 @@
     <div class="sl-mainpanel">
         <nav class="breadcrumb sl-breadcrumb">
             <a class="breadcrumb-item" href="index.html">Starlight</a>
-            <span class="breadcrumb-item active">Dashboard</span>
+            <a class="breadcrumb-item" href="index.html">{{$section}}</a>
+            <span class="breadcrumb-item active">{{$page}}</span>
         </nav>
 
         <div class="sl-pagebody">
@@ -87,6 +88,7 @@
     <script src="{{asset('starlight')}}/js/starlight.js"></script>
     <script src="{{asset('starlight')}}/js/ResizeSensor.js"></script>
     <script src="{{asset('starlight')}}/js/dashboard.js"></script>
+    @yield('script')
 </body>
 
 </html>

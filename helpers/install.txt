@@ -1,0 +1,4 @@
+1. npm install
+2. composer update
+3. php artisan storage:link
+4. npm run build
